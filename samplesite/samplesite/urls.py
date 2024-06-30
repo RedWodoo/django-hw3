@@ -16,13 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from bboard.views import index2
+from bboard.views import index, index2, index3, index4
 
 
 urlpatterns = [
     path('bboard/', include('bboard.urls')),
-    # path('bboard/', index),
-    path('bboard/login.html',index2),
+    path('bboard/', index),
+    path('bboard/login.html', index2),
+    path('bboard/about.html', index3),
+    path('bboard/contacts.html', index4),
     path('admin/', admin.site.urls),
 ]
 
